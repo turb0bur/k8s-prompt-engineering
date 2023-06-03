@@ -30,8 +30,8 @@
         </tr>
         <tr>
             <td>volume-mounts</td>
-            <td><code>create volume data and mount it in nginx container</code></td>
-            <td>Example of creating persistent volume and mounting it in Nginx container</td>
+            <td><code>create container with mount volume</code></td>
+            <td>Example of mounting volume in Nginx container</td>
             <td><a href="/yaml/app-volumeMounts.yaml">app-volumeMounts.yaml</a></td>
         </tr>
         <tr>
