@@ -1,0 +1,13 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: sync-photos-job
+spec:
+  template:
+    spec:
+      containers:
+      - name: sync-photos
+        image: ubuntu
+        command: ["rsync", "-avz", "--delete", "--exclude=*.tmp", "google-drive:/photos/", "/local/photos/"]
+      restartPolicy: Never
+  backoffLimit: 4
