@@ -1,0 +1,15 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: reboot-ubuntu
+spec:
+  schedule: "0 7 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: reboot-ubuntu
+            image: ubuntu
+            command: ["/sbin/reboot"]
+          restartPolicy: OnFailure
